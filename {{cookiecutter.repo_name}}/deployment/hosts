@@ -1,0 +1,15 @@
+[remote:children]
+production
+staging
+
+[servers:children]
+vagrant
+
+[production]
+{{cookiecutter.domain_name}} nickname=production vm=0 branch=master
+
+[staging]
+staging.{{cookiecutter.domain_name}} nickname=staging vm=0 branch=develop
+
+[vagrant]
+192.168.111.222 nickname=local vm=1 branch=develop

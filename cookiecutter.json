@@ -1,8 +1,9 @@
 {
     "project_name": "project_name",
     "repo_name":"repo_name",
+    "project_repo_url":"git@github.com:username/repo.git",
     "author_name": "Your Name",
-    "email": "Your email",
+    "email": "myemail@example.com",
     "description": "A short description of the project.",
     "year": "2013",
     "domain_name": "example.com",

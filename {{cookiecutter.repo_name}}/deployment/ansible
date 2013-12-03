@@ -1,0 +1,6 @@
+#!/bin/bash
+# Run with:
+# ./ansible -K --limit production provision.yml
+# ./ansible -K --limit staging provision.yml
+# ./ansible -K --limit local provision.yml
+/usr/bin/env ansible-playbook -i hosts "$@"

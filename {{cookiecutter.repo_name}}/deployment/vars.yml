@@ -1,0 +1,20 @@
+---
+project_name: {{cookiecutter.project_name}}
+project_root: /opt/projects/{{cookiecutter.project_name}}
+project_repo: {{cookiecutter.project_repo_url}}
+system_packages:
+  - build-essential
+  - git
+  - libevent-dev
+  - nginx
+  - postgresql
+  - postgresql-server-dev-all
+  - python-dev
+  - python-setuptools
+  - redis-server
+  - postfix
+python_packages:
+  - pip
+  - virtualenv
+initfiles:
+  - gunicorn
