@@ -28,6 +28,9 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable avatars
     url(r'^avatar/', include('avatar.urls')),
 
+    # Uncomment the next line to enable django rest framework browsable API
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+
     # Your stuff: custom urls go here
 
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -9,6 +9,7 @@ Features
 ---------
 
 * For Django 1.6
+* Django Rest Framework
 * Twitter Bootstrap 3
 * AngularJS
 * Settings management via django-configurations
