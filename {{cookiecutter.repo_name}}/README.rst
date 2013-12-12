@@ -40,11 +40,11 @@ Developer Installation
 
 For getting this running on your local machine:
 
-1. Set up a virtualenv. 
-2. Install all the supporting libraries into your virtualenv::
 
-    pip install -r requirements/local.txt
-
+1. Install latest version of virtualbox. https://www.virtualbox.org/wiki/Downloads
+2. Install latest version of Vagrant. http://downloads.vagrantup.com/
+3. Clone this repo: `git clone {{cookiecutter.repo_url}} {{cookiecutter.repo_name}} && cd {{cookiecutter.repo_name}}`
+4. Run local development servers: `vagrant up`
 
 Deployment
 ------------

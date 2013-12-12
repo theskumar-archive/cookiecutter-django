@@ -4,6 +4,8 @@ staging
 
 [servers:children]
 vagrant
+production
+staging
 
 [production]
 {{cookiecutter.domain_name}} nickname=production vm=0 branch=master
@@ -12,4 +14,4 @@ vagrant
 staging.{{cookiecutter.domain_name}} nickname=staging vm=0 branch=develop
 
 [vagrant]
-192.168.111.222 nickname=local vm=1 branch=develop
+192.168.111.222 nickname=vagrant vm=1 branch=develop

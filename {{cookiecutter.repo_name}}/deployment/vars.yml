@@ -13,6 +13,8 @@ system_packages:
   - python-setuptools
   - redis-server
   - postfix
+  - htop
+  - fail2ban
 python_packages:
   - pip
   - virtualenv
