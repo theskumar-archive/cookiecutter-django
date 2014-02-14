@@ -20,7 +20,7 @@ def dev():
 # ==========================================================================
 
 def setup():
-    local('pip install requirements/local.txt')
+    local('pip install -r requirements/local.txt')
     manage('syncdb')
     manage('migrate')
     manage('createsuperuser')
