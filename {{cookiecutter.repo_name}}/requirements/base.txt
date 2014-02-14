@@ -34,8 +34,10 @@ django-autoslug==1.7.2
 django-avatar==2.0
 
 # Rest Framework
-djangorestframework==2.3.10
+djangorestframework==2.3.12
 markdown==2.3.1
 django-filter==0.7
+djangorestframework-jwt==0.1.2
+django-cors-headers==0.12
 
 # Your custom requirements go here

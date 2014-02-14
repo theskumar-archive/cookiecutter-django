@@ -1,0 +1,9 @@
+{% raw %}
+{% extends "rest_framework/base.html" %}
+
+{# Overrides for Browsable API #}
+
+{% block title %}{{cookiecutter.project_name}}{% endblock %}
+
+{% block branding %}<a class='brand' href='/api/'>{{cookiecutter.project_name}}</a>{% endblock %}
+{% endraw %}

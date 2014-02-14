@@ -28,8 +28,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable avatars
     url(r'^avatar/', include('avatar.urls')),
 
-    # Uncomment the next line to enable django rest framework browsable API
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    # REST API
+    url(r'^api/', include('api.urls')),
 
     # Your stuff: custom urls go here
 
