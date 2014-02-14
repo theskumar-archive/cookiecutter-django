@@ -63,7 +63,7 @@ Run these commands to deploy the project to Heroku:
 
 .. code-block:: bash
 
-    heroku create --buildpack https://github.com/heroku/heroku-buildpack-python
+    heroku create --buildpack https://github.com/heroku/heroku-buildpack-python --remote=dev
     heroku addons:add heroku-postgresql:dev
     heroku addons:add pgbackups
     heroku addons:add sendgrid:starter
