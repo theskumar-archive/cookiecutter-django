@@ -64,7 +64,7 @@ If you'd like to take advantage of live reloading and Sass / Compass CSS compila
 
 Make sure that nodejs_ is installed. Then in the project root run::
 
-    $ npm install grunt
+    $ npm install
 
 .. _nodejs: http://nodejs.org/download/
 
@@ -102,8 +102,5 @@ Run these commands to deploy the project to Heroku:
     heroku config:set SENDGRID_USERNAME=YOUR_SENDGRID_USERNAME_HERE
     heroku config:set SENDGRID_PASSWORD=YOUR_SENDGRID_PASSWORD_HERE
     git push heroku master
-    heroku run python {{cookiecutter.repo_name}}/manage.py syncdb --noinput --settings=config.settings
-    heroku run python {{cookiecutter.repo_name}}/manage.py migrate --noinput --settings=config.settings
-    heroku run python {{cookiecutter.repo_name}}/manage.py createsuperuser
+    heroku run python {{cookiecutter.repo_name}}/manage.py migrate
     heroku open
-

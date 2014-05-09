@@ -1,5 +1,5 @@
 # Bleeding edge Django
-django==1.6.4
+https://github.com/django/django/archive/stable/1.7.x.zip
 
 # Configuration
 django-configurations==0.8
@@ -13,7 +13,6 @@ django-crispy-forms==1.4.0
 django-floppyforms==1.1.1
 
 # Models
-South==0.8.4
 django-model-utils==2.0.3
 
 # images
@@ -32,6 +31,5 @@ django-autoslug==1.7.2
 
 # Useful things
 django-avatar==2.0
-
 
 # Your custom requirements go here

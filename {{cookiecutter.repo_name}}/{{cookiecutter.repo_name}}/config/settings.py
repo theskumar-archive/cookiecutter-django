@@ -45,7 +45,6 @@ class Common(Configuration):
         'django.contrib.admin',
     )
     THIRD_PARTY_APPS = (
-        'south',  # Database migration helpers:
         'crispy_forms',  # Form layouts
         'avatar',  # for user avatars
     )
@@ -74,6 +73,7 @@ class Common(Configuration):
         'django.middleware.common.CommonMiddleware',
         'django.middleware.csrf.CsrfViewMiddleware',
         'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     )
@@ -132,23 +132,21 @@ class Common(Configuration):
     ########## END CACHING
 
     ########## GENERAL CONFIGURATION
-    # See: https://docs.djangoproject.com/en/dev/ref/settings/#time-zone
-    TIME_ZONE = 'America/Los_Angeles'
+    # Internationalization
+    # https://docs.djangoproject.com/en/dev/topics/i18n/
 
-    # See: https://docs.djangoproject.com/en/dev/ref/settings/#language-code
+    TIME_ZONE = 'UTC'
+
     LANGUAGE_CODE = 'en-us'
+
+    USE_I18N = True
+
+    USE_L10N = True
+
+    USE_TZ = True
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#site-id
     SITE_ID = 1
-
-    # See: https://docs.djangoproject.com/en/dev/ref/settings/#use-i18n
-    USE_I18N = True
-
-    # See: https://docs.djangoproject.com/en/dev/ref/settings/#use-l10n
-    USE_L10N = True
-
-    # See: https://docs.djangoproject.com/en/dev/ref/settings/#use-tz
-    USE_TZ = True
     ########## END GENERAL CONFIGURATION
 
     ########## TEMPLATE CONFIGURATION
@@ -394,7 +392,8 @@ class Production(Common):
     ########## END TEMPLATE CONFIGURATION
 
     ########## CACHING
-    # Only do this here because thanks to django-pylibmc-sasl and pylibmc memcacheify is painful to install on windows.
+    # Only do this here because thanks to django-pylibmc-sasl and pylibmc
+    # memcacheify is painful to install on windows.
     try:
         # See: https://github.com/rdegges/django-heroku-memcacheify
         from memcacheify import memcacheify
@@ -404,4 +403,3 @@ class Production(Common):
     ########## END CACHING
 
     ########## Your production stuff: Below this line define 3rd party libary settings
-
