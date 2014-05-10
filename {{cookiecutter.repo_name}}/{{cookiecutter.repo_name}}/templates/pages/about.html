@@ -1,1 +1,8 @@
-{% raw %}{% extends "base.html" %}{% endraw %}
+{% raw %}{% extends "base.html" %}
+{% block title %}About — {{ block.super }}{% endblock %}
+{% block page_classes %}{{ block.super }} about{% endblock %}
+
+{% block content %}
+<p>Coming soon!</p>
+{% endblock content %}
+{% endraw %}
